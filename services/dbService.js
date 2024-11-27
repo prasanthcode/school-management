@@ -9,6 +9,12 @@ const pool = mysql.createPool({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
 });
+console.log('Running in:', process.env.NODE_ENV);
+console.log('Database Config:', {
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+});
 
 const promisePool = pool.promise();
 
